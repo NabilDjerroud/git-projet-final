@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Rubik:wght@300;800&display=swap');
+
+
+/*
+button de la navigation ca doit etre le troisieme exemple :
+https://dev.to/webdeasy/top-20-css-buttons-animations-f41
+
+
+palette couleur :
+#103239
+#599390
+#9FB7B9
+#BCC1BA
+#F2E2D2
+}
+police de caractere :
+Rubik
+Abril
+Helvetica
+
+*/
+h1 {
+  font-family: 'Abril Fatface', cursive;
+  color: #599390;
+  animation: colorTransitionAnimation 5s infinite;
+}
+
+@keyframes colorTransitionAnimation {
+  0%, 100% {
+    color: #599390;
+  }
+  25% {
+    color: #E76F51;
+  }
+  50% {
+    color: #9A77B8;
+  }
+  75% {
+    color: #57A773;
+  }
+}
+
+.mon-image {
+  flex-basis: 100%;
+  width: 100%;
+  animation: imageAnimation 6s infinite alternate;
+}
+
+@keyframes imageAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+*
+{
+  box-sizing: border-box;
+}
+body
+{
+  background-color: #BCC1BA;
+  padding-left: 50px;
+  padding-right:30px;
+  padding-top: 50px;
+
+}
+nav
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #103239;
+  border-radius: 5px;
+  padding:10px 0 ;
+  margin-bottom: 15px;
+  
+}
+nav ul li{
+  position:relative;
+  display:inline-block;
+  line-height: 80px ;
+  margin: 0 5px ;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  
+  
+}
+nav ul li a{
+  text-decoration: none;
+  color: #103239;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 5px;
+  background-color:#BCC1BA;
+  font-family: 'rubik', sans-serif;
+
+}
+
+nav ul li:hover a{
+    box-shadow: 0 0 10px 4px white;
+}
+.presentation figure{
+  flex-basis: 200%;
+}
+.presentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+.mon-image {
+  flex-basis: 50%; 
+  max-width: 100%; 
+  position: relative;
+}
+
+.premierp {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  flex-basis: 45%; 
+  color: #103239;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  margin-left: 20px; 
+}
+.nomprenom{
+  font-size: 40px;
+
+}
+h1,h2,h3{
+font-family: 'Abril Fatface', cursive;
+color: #599390;
+}
+img.logo{
+  width: 200px;
+  margin-left: 0px;
+  
+}
+
+.button a{
+  color:#599390;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:20px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#F2E2D2;
+  display:block;
+  position:relative;
+  padding:0px 20px 0px 20px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #9FB7B9;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #9FB7B9;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #9FB7B9;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active{
+  top:10px;
+  background-color:#BCC1BA;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #000000;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #000000;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #000000;
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+footer{
+  background: #103239;
+  padding: 40px 0;
+  text-align: center;
+  }
+footer div.social a{
+font-size: 24px;
+color: inherit;
+border: 1px solid inherit;
+width: 40px;
+height: 40px ;
+line-height: 38px;
+display: inline-block;
+text-align: center;
+border-radius: 50%;
+margin: 0 8px;
+opacity: 0.75;
+}
+footer div.social a:hover{
+opacity: 0.9;
+
+}
+
+@media (max-width: 420px) {
+
+  .presentation {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+
+  .mon-image {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .premierp {
+    margin-left: 0;
+    padding-right: 0;
+    font-size: 1.5rem;
+  }
+  img.logo{
+    width: 50px;
+    margin-left: 0px;
+    
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul {
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+  nav ul li a {
+    margin: 20px;
+  }
+}
